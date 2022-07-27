@@ -7,7 +7,7 @@
 
 ## Screenshot
 
-![](screenshot.png)
+![](./etc/screenshot.png)
 
 ## Requirement
 
