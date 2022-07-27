@@ -1,5 +1,5 @@
-[[http://melpa.org/#/kaomoji][http://melpa.org/packages/kaomoji-badge.svg]]
-[[http://www.wtfpl.net/][https://img.shields.io/badge/license-WTFPL-brightgreen.svg]]
+[![License](https://img.shields.io/badge/license-WTFPL-brightgreen.svg)](http://www.wtfpl.net/)
+[![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/kaomoji.svg)](https://jcs-emacs.github.io/jcs-elpa/#/kaomoji)
 
 # Kaomoji.el - Input Kaomoji (顔文字) Easily!
 
