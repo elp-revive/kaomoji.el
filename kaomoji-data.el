@@ -1,9 +1,6 @@
-;;; kaomoji-data.el --- data for kaomoji.el          -*- lexical-binding: t; -*-
+;;; kaomoji-data.el --- data for kaomoji  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016  kuanyui
-
-;; Author: kuanyui <azazabc123@gmail.com>
-;; Keywords: 
 
 ;; WTFPL 2.0
 ;; Ono Hiroko (kuanyui) (ɔ) Copyleft 2015
