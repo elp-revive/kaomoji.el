@@ -6,6 +6,7 @@
 (keywords "tools" "fun")
 
 (package-file "kaomoji.el")
+(files "kaomoji-data.el")
 
 (source "gnu")
 (source "melpa")
