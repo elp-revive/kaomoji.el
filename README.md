@@ -3,6 +3,8 @@
 
 # Kaomoji.el - Input Kaomoji (顔文字) Easily!
 
+[![CI](https://github.com/elp-revive/kaomoji.el/actions/workflows/test.yml/badge.svg)](https://github.com/elp-revive/kaomoji.el/actions/workflows/test.yml)
+
 ## Screenshot
 
 ![](screenshot.png)
