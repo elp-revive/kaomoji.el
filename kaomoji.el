@@ -1,12 +1,14 @@
-;;; kaomoji.el --- Input kaomoji superb easily      -*- lexical-binding: t; -*-
+;;; kaomoji.el --- Input kaomoji superb easily  -*- lexical-binding: t; -*-
 
 ;; Author: Ono Hiroko <azazabc123@gmail.com>
+;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
+;; Package-Requires: ((emacs "24.3"))
+;; URL: https://github.com/elp-revive/kaomoji.el
+;; Version: 0.1.0
 ;; Keywords: tools, fun
-;; Package-Requires: ((emacs "24.3") (helm-core "3.6.0"))
-;; X-URL: https://github.com/kuanyui/kaomoji.el
-;; Version: {{VERSION}}
 
 ;; Ono Hiroko (kuanyui) (ɔ) Copyleft 2016
+;; Jen-Chieh Shen (jcs092018) (ɔ) Copyleft 2022
 ;;
 ;; This program is free software. It comes without any warranty, to
 ;; the extent permitted by applicable law. You can redistribute it
@@ -16,7 +18,7 @@
 
 ;;; Commentary:
 ;;
-;; Visit https://github.com/kuanyui/kaomoji.el
+;; Visit https://github.com/elp-revive/kaomoji.el
 ;; to see screenshot & usage guide.
 
 ;; ======= Usage =======
@@ -33,19 +35,12 @@
 ;;                 (("angry" "punch") . "#ﾟÅﾟ）⊂彡☆))ﾟДﾟ)･∵"))
 ;;               kaomoji-table))
 
-;; `kaomoji-patterns-inserted-along-with' : When your input (from Helm
-;; minibuffer) contains any of the patterns, insert the input along
-;; with the kaomoji.
-;;
-;; (setq kaomoji-patterns-inserted-along-with nil) to disable this
-;; function.
-
 ;; `kaomoji-insert-user-input-at' : 'left-side or 'right-side
 
 ;;; Code:
 
 (require 'cl-lib)
-(require 'helm-core)
+
 (require 'kaomoji-data)
 
 (defvar kaomoji-candidates-limit 9999)
@@ -62,17 +57,6 @@
   "Which side to concatenate your input with kaomoji. The value
   can be `left-side' or `right-side'.  This variable is working with
   variable `kaomoji-patterns-inserted-along-with'")
-
-;;;###autoload
-(defun kaomoji ()
-  (interactive)
-  (helm :sources (helm-build-sync-source "Please input pattern to search Kaomoji: "
-                   :candidates (lambda () (kaomoji-get-candidates helm-pattern))
-                   :volatile t
-                   :action (lambda (str) (insert (kaomoji-process-the-string-to-insert helm-pattern str)))
-                   :candidate-number-limit kaomoji-candidates-limit)
-        :buffer kaomoji-buffer-name
-        :prompt kaomoji-prompt))
 
 (defun kaomoji-get-candidates (pattern)
   "Get candidates list from `kaomoji-internal-get-candidates',
