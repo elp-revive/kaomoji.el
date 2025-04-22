@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "kaomoji"
          "0.1.0"
          "Input kaomoji superb easily")
